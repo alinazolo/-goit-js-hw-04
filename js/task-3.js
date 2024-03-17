@@ -1,11 +1,14 @@
-function getElementWidth (content, padding, border) {
-    Number.parseFloat("content"); 
-    Number.parseFloat("padding"); 
-    Number.parseFloat("border"); 
-  const number = `${Number.parseFloat(content) + Number.parseFloat(padding) * 2 + Number.parseFloat(border) * 2}`;
-  return Number(number);
-            }
-            
-            console.log(getElementWidth("50px", "8px", "4px")); // 74
-            console.log(getElementWidth("60px", "12px", "8.5px")); // 101
-            console.log(getElementWidth("200px", "0px", "0px")); // 200
+const friends = [
+  { name: 'Poly', online: false },
+  { name: 'Mango', online: false },
+];
+console.table(friends);
+
+function findFriendByName (allFriends, friendName) {
+for (const friend of allFriends) {
+if (friendName === friend.name) {
+  return friend;
+}
+}
+}
+console.log(findFriendByName (friends, 'Mango'));

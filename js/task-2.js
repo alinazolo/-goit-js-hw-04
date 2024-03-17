@@ -1,14 +1,16 @@
 function calcAverageCalories(days) {
-        const calorries = [{ day: "monday", calories: 3010,      
-      }];
-      let totalCalories = [];
-      let totalDays = [];
-    for (const product of calorries) {
-        totalCalories += product.calories;
-        totalDays
-    }
-
-}
+        let totalCalories = 0;
+        for (let i = 0; i < days.length; i++) {
+          totalCalories += days[i].calories;
+        }
+        if (days.length >= 1) {
+          return totalCalories / days.length;
+        }
+        else {
+          return 0;
+        }
+        }
+       
       
 
       console.log(
