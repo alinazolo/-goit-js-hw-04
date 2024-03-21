@@ -1,14 +1,23 @@
-const friends = [
-  { name: 'Poly', online: false },
-  { name: 'Mango', online: false },
-];
-console.table(friends);
+const profile = {
+  username: "Jacob",
+playTime: 300,
+changeUsername(newName) {
+  this.username = newName;
+},
+updatePlayTime(hours) {
+this.playTime += hours;
+},
+getInfo() {
+  return `${this.username} has ${this.playTime} active hours`;
+},
+};
 
-function findFriendByName (allFriends, friendName) {
-for (const friend of allFriends) {
-if (friendName === friend.name) {
-  return friend;
-}
-}
-}
-console.log(findFriendByName (friends, 'Mango'));
+
+
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
